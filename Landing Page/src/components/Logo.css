@@ -1,0 +1,16 @@
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo-container:hover {
+  color: grey; /* Change to grey on hover */
+  transform: scale(1.1); /* Slightly enlarge the logo */
+}

@@ -1,0 +1,6 @@
+/* src/App.css */
+.App {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrollbars from appearing */
+}

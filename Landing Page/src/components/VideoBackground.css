@@ -1,0 +1,124 @@
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  padding: 20px; /* Add padding to avoid content being too close to the edges */
+  box-sizing: border-box; /* Ensure padding does not affect the width/height */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 0;
+  opacity: 1;
+  animation: fadeOutBlack 3s ease-in-out forwards;
+}
+
+@keyframes fadeOutBlack {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 2s ease-out;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.main-text {
+  font-size: 54px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.sub-text {
+  font-size: 30px;
+  opacity: 0;
+  animation: slideIn 2s ease-out 0.5s forwards; /* Slight delay for staggered effect */
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in effect */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 767px) {
+  .logo-container {
+    font-size: 18px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .overlay-text {
+    padding: 10px;
+  }
+
+  .main-text {
+    font-size: 36px;
+  }
+
+  .sub-text {
+    font-size: 18px;
+  }
+}
